@@ -143,7 +143,7 @@ a {
 }
 
 .services-preview {
-    padding: 100px 0;
+    padding: 80px 0;
 }
 
 .section-heading {
@@ -174,7 +174,7 @@ a {
 }
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
 
@@ -217,7 +217,7 @@ a {
 }
 
 .agro-preview {
-    padding: 100px 0;
+    padding: 70px 0;
 }
 
 .agro-container {
@@ -265,7 +265,7 @@ a {
 
 .agro-visual img {
     width: 100%;
-    max-width: 480px;
+    max-width: 600px;
     height: auto;
     display: block;
 }
