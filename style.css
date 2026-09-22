@@ -25,7 +25,9 @@ a {
 }
 
 
-/* HEADER */
+/* ========================================
+   HEADER
+======================================== */
 
 .header {
     width: 100%;
@@ -42,11 +44,13 @@ a {
 
     gap: 30px;
 }
+
 .logo img {
     width: 150px;
     height: auto;
     display: block;
 }
+
 .nav {
     display: flex;
     align-items: center;
@@ -62,12 +66,37 @@ a {
 .nav a:hover {
     color: #00c8ff;
 }
-.hero-visual img {
-    width: 500px;
-    max-width: 100%;
-    height: auto;
-    display: block;
+
+
+/* BOTÃO WHATSAPP DO HEADER */
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 18px;
+
+    background: #25D366;
+    color: #ffffff;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: background 0.3s ease;
 }
+
+.btn-whatsapp:hover {
+    background: #20bd5a;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
 .hero-container {
     min-height: 650px;
 
@@ -75,25 +104,33 @@ a {
     grid-template-columns: 1fr 1fr;
 
     align-items: center;
+
     gap: 60px;
 }
+
 .hero-content {
     max-width: 600px;
 }
+
 .hero-label {
     display: block;
+
     margin-bottom: 12px;
 
     font-size: 14px;
     font-weight: 600;
+
     letter-spacing: 2px;
+
     color: #00c8ff;
 }
 
 .hero-content h1 {
     font-size: 52px;
     line-height: 1.08;
+
     margin-bottom: 20px;
+
     max-width: 650px;
 }
 
@@ -104,22 +141,52 @@ a {
 .hero-content p {
     font-size: 18px;
     line-height: 1.6;
+
     color: #c7d2df;
+
     max-width: 580px;
 }
+
 .hero-buttons {
     display: flex;
+
     gap: 15px;
+
     margin-top: 30px;
 }
 
+.hero-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-visual img {
+    width: 500px;
+    max-width: 100%;
+
+    height: auto;
+
+    display: block;
+}
+
+
+/* ========================================
+   BOTÕES
+======================================== */
+
 .btn-primary,
 .btn-secondary {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     padding: 14px 24px;
+
     border-radius: 8px;
+
     font-size: 15px;
     font-weight: 600;
+
     transition: all 0.3s ease;
 }
 
@@ -142,79 +209,141 @@ a {
     color: #050b14;
 }
 
+
+/* ========================================
+   SERVIÇOS
+======================================== */
+
 .services-preview {
     padding: 80px 0;
 }
 
 .section-heading {
     max-width: 700px;
+
     margin-bottom: 50px;
 }
 
 .section-heading span {
     display: block;
+
     margin-bottom: 12px;
 
     font-size: 14px;
     font-weight: 600;
+
     letter-spacing: 2px;
+
     color: #00c8ff;
 }
 
 .section-heading h2 {
     font-size: 38px;
     line-height: 1.2;
+
     margin-bottom: 18px;
 }
 
 .section-heading p {
     font-size: 17px;
     line-height: 1.6;
+
     color: #aebdce;
 }
+
+
+/* GRID DOS SERVIÇOS */
+
 .services-grid {
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 25px;
 }
+
+
+/* CARD */
 
 .service-card {
     padding: 30px;
 
     background: #0a1422;
+
     border: 1px solid rgba(0, 200, 255, 0.15);
+
     border-radius: 12px;
 
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-6px);
+
     border-color: rgba(0, 200, 255, 0.6);
 }
 
+
+/* ÍCONE */
+
 .service-icon {
-    font-size: 32px;
     margin-bottom: 20px;
 }
 
+.service-icon svg {
+    width: 42px;
+    height: 42px;
+
+    fill: #00c8ff;
+
+    display: block;
+}
+
+
+/* TÍTULO */
+
 .service-card h3 {
     font-size: 21px;
+
+    line-height: 1.2;
+
     margin-bottom: 12px;
 }
+
+
+/* DESCRIÇÃO */
 
 .service-card p {
     font-size: 15px;
     line-height: 1.6;
+
     color: #aebdce;
+
     margin-bottom: 20px;
 }
 
+
+/* LINK */
+
 .service-card a {
     color: #00c8ff;
+
     font-size: 14px;
     font-weight: 600;
+
+    transition: color 0.3s ease;
 }
+
+.service-card a:hover {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   AGRO FÁCIL
+======================================== */
 
 .agro-preview {
     padding: 70px 0;
@@ -222,8 +351,11 @@ a {
 
 .agro-container {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     align-items: center;
+
     gap: 70px;
 }
 
@@ -233,39 +365,234 @@ a {
 
 .agro-label {
     display: block;
+
     margin-bottom: 12px;
 
     font-size: 14px;
     font-weight: 600;
+
     letter-spacing: 2px;
+
     color: #7ac943;
 }
 
 .agro-content h2 {
     font-size: 42px;
+
+    line-height: 1.2;
+
     margin-bottom: 20px;
 }
 
-.agro-content p {
+
+/* FRASE DE DESTAQUE */
+
+.agro-content p:first-of-type {
+    font-size: 18px;
+    font-weight: 600;
+
+    color: #ffffff;
+
+    margin-bottom: 15px;
+}
+
+
+/* DESCRIÇÃO */
+
+.agro-content p:last-of-type {
     font-size: 17px;
     line-height: 1.7;
+
     color: #aebdce;
+
     margin-bottom: 15px;
 }
 
 .agro-content .btn-primary {
-    display: inline-block;
+    display: inline-flex;
+
     margin-top: 15px;
 }
 
+
+/* IMAGEM */
+
 .agro-visual {
     display: flex;
+
     justify-content: center;
 }
 
 .agro-visual img {
     width: 100%;
     max-width: 600px;
+
     height: auto;
+
     display: block;
+}
+
+
+/* ========================================
+   CTA FINAL
+======================================== */
+
+.contact-cta {
+    padding: 100px 0;
+}
+
+.contact-cta-content {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 70px 60px;
+
+    text-align: center;
+
+    background: #0a1422;
+
+    border: 1px solid rgba(0, 200, 255, 0.2);
+
+    border-radius: 16px;
+}
+
+.contact-cta-content span {
+    display: block;
+
+    margin-bottom: 14px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #00c8ff;
+}
+
+.contact-cta-content h2 {
+    font-size: 40px;
+
+    line-height: 1.2;
+
+    margin-bottom: 18px;
+}
+
+.contact-cta-content p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 17px;
+    line-height: 1.6;
+
+    color: #aebdce;
+}
+
+
+/* ========================================
+   BOTÃO WHATSAPP DO CTA
+======================================== */
+
+.contact-cta .btn-whatsapp-cta {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    width: 480px;
+
+    padding: 20px 32px;
+
+    margin-top: 30px;
+
+    background: #25D366;
+
+    color: #ffffff;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    transition: background 0.3s ease;
+}
+
+.contact-cta .btn-whatsapp-cta svg {
+    width: 30px;
+    height: 30px;
+
+    fill: currentColor;
+
+    display: block;
+}
+
+.contact-cta .btn-whatsapp-cta:hover {
+    background: #20bd5a;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+    width: 100%;
+
+    padding: 18px 0;
+
+    border-top: 1px solid rgba(0, 200, 255, 0.12);
+
+    background: #050b14;
+}
+
+.footer p {
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #aebdce;
+}
+
+
+
+/* =========================================================
+   HERO DA PÁGINA DE SERVIÇOS
+   ========================================================= */
+
+.services-hero {
+    padding: 100px 0 110px;
+}
+
+.services-hero-content {
+    max-width: 800px;
+}
+
+.services-hero-content .hero-label {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #00c8ff;
+}
+
+.services-hero-content h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 22px;
+    max-width: 800px;
+}
+
+.services-hero-content h1 span {
+    color: #00c8ff;
+}
+
+.services-hero-content p {
+    max-width: 700px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #aebdce;
 }
