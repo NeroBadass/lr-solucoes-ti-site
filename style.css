@@ -596,3 +596,490 @@ a {
     line-height: 1.7;
     color: #aebdce;
 }
+
+/* =========================================================
+   PÁGINA DE SERVIÇOS - LISTA EXPANSÍVEL
+   ========================================================= */
+
+.services-list {
+    padding: 20px 0 100px;
+}
+
+.services-list .container {
+    max-width: 1100px;
+}
+
+
+/* =========================================================
+   CARD DO SERVIÇO
+   ========================================================= */
+
+.service-expandable {
+    background: #0a1422;
+    border: 1px solid rgba(0, 200, 255, 0.18);
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 25px;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.service-expandable:hover {
+    border-color: rgba(0, 200, 255, 0.55);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.28);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ÁREA PRINCIPAL DO CARD
+   ========================================================= */
+
+.service-expand-header {
+    min-height: 220px;
+
+    display: grid;
+
+    grid-template-columns:
+        330px
+        1fr
+        50px;
+
+    align-items: center;
+
+    gap: 35px;
+
+    padding: 30px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   IMAGEM
+   ========================================================= */
+.service-expand-image {
+    width: 330px;
+    height: 185px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background: #07101c;
+
+    transition:
+        width 0.5s ease,
+        height 0.5s ease;
+}
+/* =========================================================
+   IMAGEM
+   ========================================================= */
+
+.service-expand-image {
+    width: 330px;
+    height: 185px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #07101c;
+}
+
+.service-expand-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+/* Remove completamente o número 01, 02, 03... */
+.service-expand-title span {
+    display: none;
+}
+
+.service-expand-title h2 {
+    margin: 0 0 12px;
+
+    font-size: 32px;
+
+    line-height: 1.2;
+}
+
+.service-expand-title p {
+    margin: 0;
+
+    max-width: 520px;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color: #aebdce;
+}
+
+
+/* =========================================================
+   ÍCONE +
+   ========================================================= */
+
+.service-expand-icon {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(0, 200, 255, 0.4);
+
+    border-radius: 50%;
+
+    color: #00c8ff;
+
+    font-size: 29px;
+    font-weight: 300;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.service-expandable:hover .service-expand-icon {
+    transform: rotate(45deg);
+
+    background: #00c8ff;
+
+    color: #050b14;
+
+    border-color: #00c8ff;
+}
+
+
+/* =========================================================
+   ÁREA EXPANDIDA
+   ========================================================= */
+
+.service-expand-content {
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    padding: 0 30px;
+
+    transition:
+        max-height 0.6s ease,
+        opacity 0.35s ease,
+        padding 0.5s ease;
+}
+
+
+/* =========================================================
+   EXPANSÃO DO MESMO CARD
+   ========================================================= */
+
+.service-expandable:hover .service-expand-content {
+    max-height: 700px;
+
+    opacity: 1;
+
+    padding: 0 30px 40px;
+}
+
+
+/* =========================================================
+   LINHA SEPARADORA
+   ========================================================= */
+
+.service-expand-content::before {
+    content: "";
+
+    display: block;
+
+    height: 1px;
+
+    margin-bottom: 32px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 200, 255, 0.35),
+            rgba(0, 200, 255, 0.05)
+        );
+}
+
+
+/* =========================================================
+   TEXTO EXPANDIDO
+   ========================================================= */
+
+.service-expand-text {
+    max-width: 850px;
+
+    padding-left: 365px;
+}
+
+.service-expand-text h3 {
+    margin-bottom: 14px;
+
+    font-size: 23px;
+
+    line-height: 1.35;
+}
+
+.service-expand-text p {
+    margin-bottom: 24px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #aebdce;
+}
+
+
+/* =========================================================
+   LISTA DE SERVIÇOS
+   ========================================================= */
+
+.service-expand-text ul {
+    margin: 0 0 28px;
+
+    padding: 0;
+
+    list-style: none;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px 35px;
+}
+
+.service-expand-text li {
+    position: relative;
+
+    padding-left: 24px;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    color: #dce7f5;
+}
+
+.service-expand-text li::before {
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    color: #00c8ff;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   BOTÃO DO SERVIÇO
+   ========================================================= */
+
+.service-expand-text .btn-primary {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 24px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .service-expand-header {
+        grid-template-columns:
+            240px
+            1fr
+            45px;
+
+        gap: 25px;
+
+        padding: 25px;
+    }
+
+    .service-expand-image {
+        width: 240px;
+        height: 145px;
+    }
+
+    .service-expand-title h2 {
+        font-size: 27px;
+    }
+
+    .service-expand-title p {
+        font-size: 15px;
+    }
+
+    .service-expand-text {
+        padding-left: 265px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .services-list {
+        padding-bottom: 70px;
+    }
+
+    .services-hero {
+        padding: 70px 0;
+    }
+
+    .services-hero-content h1 {
+        font-size: 38px;
+    }
+
+    .services-hero-content p {
+        font-size: 16px;
+    }
+
+
+    .service-expand-header {
+        grid-template-columns:
+            1fr
+            40px;
+
+        gap: 18px;
+
+        padding: 20px;
+    }
+
+
+    .service-expand-image {
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        height: 210px;
+    }
+
+
+    .service-expand-title {
+        grid-column: 1;
+    }
+
+    .service-expand-title h2 {
+        font-size: 25px;
+    }
+
+    .service-expand-title p {
+        font-size: 15px;
+    }
+
+
+    .service-expand-icon {
+        grid-column: 2;
+
+        grid-row: 2;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 25px;
+    }
+
+
+    /*
+       No celular o comportamento de hover não é confiável.
+       Por isso o conteúdo fica visível.
+    */
+
+    .service-expand-content {
+        max-height: none;
+
+        opacity: 1;
+
+        padding: 0 20px 30px;
+    }
+
+    .service-expand-content::before {
+        margin-bottom: 25px;
+    }
+
+    .service-expand-text {
+        padding-left: 0;
+    }
+
+    .service-expand-text h3 {
+        font-size: 20px;
+    }
+
+    .service-expand-text ul {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .services-hero-content h1 {
+        font-size: 32px;
+    }
+
+    .service-expand-image {
+        height: 175px;
+    }
+
+    .service-expand-title h2 {
+        font-size: 22px;
+    }
+
+    .service-expand-icon {
+        width: 36px;
+        height: 36px;
+
+        font-size: 23px;
+    }
+
+    .service-expand-text p {
+        font-size: 15px;
+    }
+
+}
