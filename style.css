@@ -1083,3 +1083,519 @@ a {
     }
 
 }
+
+
+/* =========================================================
+   PÁGINA AGRO FÁCIL
+   ========================================================= */
+
+/* CORES E IDENTIDADE VISUAL */
+
+.agro-page-hero,
+.agro-page-benefits,
+.agro-page-features,
+.agro-page-offline,
+.agro-page-download {
+    position: relative;
+}
+
+.agro-page-hero {
+    padding: 90px 0;
+    background:
+        radial-gradient(circle at 80% 30%, rgba(55, 160, 65, 0.13), transparent 40%),
+        #050b14;
+}
+
+.agro-page-hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.agro-page-hero-content {
+    max-width: 620px;
+}
+
+.agro-page-label {
+    display: block;
+    margin-bottom: 20px;
+    color: #7ac943;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.agro-page-hero-content h1 {
+    font-size: 49px;
+    line-height: 1.12;
+    margin-bottom: 25px;
+}
+
+.agro-page-hero-content h1 span {
+    color: #7ac943;
+}
+
+.agro-page-hero-content > p {
+    color: #aebdce;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.agro-page-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.agro-page-buttons .btn-primary {
+    background: #58b832;
+    color: #ffffff;
+}
+
+.agro-page-buttons .btn-primary:hover {
+    background: #72d34b;
+}
+
+.agro-page-buttons .btn-secondary {
+    border-color: #58b832;
+    color: #7ac943;
+}
+
+.agro-page-buttons .btn-secondary:hover {
+    background: #58b832;
+    color: #ffffff;
+}
+
+.agro-page-highlight {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    color: #a8d98c;
+    font-size: 14px;
+}
+
+.agro-page-hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.agro-page-hero-image img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================================================
+   DIFERENCIAIS
+   ========================================================= */
+
+.agro-page-benefits {
+    padding: 90px 0;
+    background: #080f14;
+}
+
+.agro-page-section-heading {
+    max-width: 760px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.agro-page-section-heading > span {
+    display: block;
+    margin-bottom: 15px;
+    color: #7ac943;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.agro-page-section-heading h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.agro-page-section-heading p {
+    color: #aebdce;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.agro-page-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.agro-page-benefit {
+    padding: 30px 25px;
+    background: #0e1d16;
+    border: 1px solid rgba(122, 201, 67, 0.2);
+    border-radius: 14px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.agro-page-benefit:hover {
+    transform: translateY(-5px);
+    border-color: rgba(122, 201, 67, 0.6);
+}
+
+.agro-page-benefit > span {
+    display: block;
+    margin-bottom: 25px;
+    color: #7ac943;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.agro-page-benefit h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.agro-page-benefit p {
+    color: #aebdce;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FUNCIONALIDADES
+   ========================================================= */
+
+.agro-page-features {
+    padding: 100px 0;
+    background: #050b14;
+}
+
+.agro-page-feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+    padding: 65px 0;
+    border-bottom: 1px solid rgba(122, 201, 67, 0.15);
+}
+
+.agro-page-feature:last-child {
+    border-bottom: none;
+}
+
+.agro-page-feature.reverse .agro-page-feature-content {
+    order: 2;
+}
+
+.agro-page-feature.reverse .agro-page-feature-image {
+    order: 1;
+}
+
+.agro-page-feature-content > span {
+    display: block;
+    margin-bottom: 18px;
+    color: #7ac943;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.agro-page-feature-content h3 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.agro-page-feature-content p {
+    margin-bottom: 18px;
+    color: #aebdce;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.agro-page-feature-content ul {
+    padding: 0;
+    margin: 20px 0 0;
+    list-style: none;
+}
+
+.agro-page-feature-content li {
+    position: relative;
+    padding-left: 27px;
+    margin-bottom: 13px;
+    color: #dce7f5;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.agro-page-feature-content li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #7ac943;
+    font-weight: bold;
+}
+
+.agro-page-feature-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.agro-image-placeholder {
+    width: 100%;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(145deg, #10291a, #0a1710);
+    border: 1px dashed rgba(122, 201, 67, 0.45);
+    border-radius: 20px;
+    color: #7ac943;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   DESTAQUE OFFLINE
+   ========================================================= */
+
+.agro-page-offline {
+    padding: 90px 0;
+    background: linear-gradient(120deg, #0b2415, #102f19);
+}
+
+.agro-page-offline-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.agro-page-offline-container > div:first-child > span {
+    display: block;
+    margin-bottom: 18px;
+    color: #9cdd72;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.agro-page-offline h2 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.agro-page-offline h2 strong {
+    display: block;
+    color: #7ac943;
+}
+
+.agro-page-offline-container > div:first-child p {
+    color: #c4d4c4;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.agro-page-offline-card {
+    padding: 35px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(122, 201, 67, 0.3);
+    border-radius: 18px;
+    text-align: center;
+}
+
+.agro-page-offline-card span {
+    display: block;
+    color: #a8d98c;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+.agro-page-offline-card strong {
+    display: block;
+    margin: 20px 0;
+    color: #7ac943;
+    font-size: 48px;
+}
+
+.agro-page-offline-card p {
+    color: #c4d4c4;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   DOWNLOAD
+   ========================================================= */
+
+.agro-page-download {
+    padding: 100px 0;
+    background:
+        radial-gradient(circle at center, rgba(75, 170, 55, 0.12), transparent 65%),
+        #050b14;
+}
+
+.agro-page-download-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.agro-page-download-content > span {
+    display: block;
+    margin-bottom: 18px;
+    color: #7ac943;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.agro-page-download-content h2 {
+    margin-bottom: 20px;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.agro-page-download-content p {
+    margin-bottom: 30px;
+    color: #aebdce;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.agro-page-download-content .btn-primary {
+    background: #58b832;
+    color: #ffffff;
+}
+
+.agro-page-download-content .btn-primary:hover {
+    background: #72d34b;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .agro-page-benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .agro-page-feature {
+        gap: 35px;
+    }
+
+    .agro-page-feature-content h3 {
+        font-size: 28px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .agro-page-hero {
+        padding: 65px 0;
+    }
+
+    .agro-page-hero-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .agro-page-hero-content h1 {
+        font-size: 38px;
+    }
+
+    .agro-page-hero-content > p {
+        font-size: 16px;
+    }
+
+    .agro-page-buttons {
+        flex-direction: column;
+    }
+
+    .agro-page-buttons a {
+        width: 100%;
+    }
+
+    .agro-page-highlight {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .agro-page-benefits {
+        padding: 70px 0;
+    }
+
+    .agro-page-section-heading h2 {
+        font-size: 30px;
+    }
+
+    .agro-page-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .agro-page-features {
+        padding: 70px 0;
+    }
+
+    .agro-page-feature {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 45px 0;
+    }
+
+    .agro-page-feature.reverse .agro-page-feature-content,
+    .agro-page-feature.reverse .agro-page-feature-image {
+        order: initial;
+    }
+
+    .agro-page-feature-content h3 {
+        font-size: 27px;
+    }
+
+    .agro-image-placeholder {
+        min-height: 350px;
+    }
+
+    .agro-page-offline {
+        padding: 70px 0;
+    }
+
+    .agro-page-offline-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .agro-page-offline h2 {
+        font-size: 32px;
+    }
+
+    .agro-page-download {
+        padding: 75px 0;
+    }
+
+    .agro-page-download-content h2 {
+        font-size: 32px;
+    }
+
+}
