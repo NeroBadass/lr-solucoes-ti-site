@@ -1,0 +1,567 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fale Conosco | LR Soluções de TI</title>
+
+    <meta name="description" content="Entre em contato com a LR Soluções de TI. Solicite suporte, manutenção, redes, infraestrutura e soluções tecnológicas.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* PÁGINA DE CONTATO */
+        .contact-page {
+            padding: 75px 0;
+            background: #050b14;
+        }
+
+        .contact-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 45px;
+        }
+
+        .contact-heading span,
+        .contact-info-label {
+            color: #00c8ff;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .contact-heading h1 {
+            color: #ffffff;
+            font-size: clamp(30px, 5vw, 46px);
+            margin: 15px 0;
+        }
+
+        .contact-heading h1 strong {
+            color: #00c8ff;
+        }
+
+        .contact-heading p {
+            color: #aebdce;
+            line-height: 1.7;
+        }
+
+        /* LAYOUT */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 35px;
+            align-items: start;
+        }
+
+        /* INFORMAÇÕES DE CONTATO */
+        .contact-info {
+            background: #0a1422;
+            border: 1px solid #172c40;
+            border-radius: 14px;
+            padding: 30px;
+        }
+
+        .contact-info h2 {
+            color: #ffffff;
+            margin: 15px 0;
+            font-size: 25px;
+        }
+
+        .contact-info p {
+            color: #aebdce;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            gap: 13px;
+            align-items: flex-start;
+            margin-top: 25px;
+        }
+
+        .contact-info-item .contact-symbol {
+            color: #00c8ff;
+            font-size: 22px;
+        }
+
+        .contact-info-item strong {
+            display: block;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .contact-info-item span {
+            color: #aebdce;
+            font-size: 14px;
+        }
+
+        /* FORMULÁRIO */
+        .contact-form {
+            background: #0a1422;
+            border: 1px solid #172c40;
+            border-radius: 14px;
+            padding: 32px;
+        }
+
+        .contact-form h2 {
+            color: #ffffff;
+            font-size: 24px;
+            margin: 0 0 25px;
+        }
+
+        .contact-field {
+            margin-bottom: 22px;
+        }
+
+        .contact-field label,
+        .contact-service-title {
+            display: block;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 9px;
+        }
+
+        .contact-field input:not([type="checkbox"]),
+        .contact-field textarea {
+            width: 100%;
+            padding: 14px;
+            background: #101f30;
+            border: 1px solid #263c52;
+            border-radius: 8px;
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        .contact-field input:focus,
+        .contact-field textarea:focus {
+            border-color: #00c8ff;
+        }
+
+        .contact-field input::placeholder,
+        .contact-field textarea::placeholder {
+            color: #71849a;
+        }
+
+        .contact-field textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* OPÇÕES DE SERVIÇOS */
+        .contact-services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 13px;
+        }
+
+        .contact-service-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            background: #101f30;
+            border: 1px solid #263c52;
+            border-radius: 9px;
+            color: #dce7f3;
+            font-size: 13px;
+            cursor: pointer;
+            line-height: 1.4;
+            transition: 0.2s;
+        }
+
+        .contact-service-option:hover {
+            border-color: #00c8ff;
+            background: #12283a;
+        }
+
+        /* NOVO CHECKBOX PERSONALIZADO */
+        .contact-service-option input {
+            appearance: none;
+            -webkit-appearance: none;
+
+            width: 19px;
+            height: 19px;
+            min-width: 19px;
+            padding: 0;
+            margin: 0;
+
+            border: 1px solid #52677d;
+            border-radius: 5px;
+
+            background: #0a1422;
+            cursor: pointer;
+
+            display: grid;
+            place-content: center;
+            transition: 0.2s;
+        }
+
+        .contact-service-option input:checked {
+            background: #00c8ff;
+            border-color: #00c8ff;
+        }
+
+        .contact-service-option input:checked::after {
+            content: "✓";
+            color: #050b14;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .contact-service-option:has(input:checked) {
+            border-color: #00c8ff;
+            background: #10283a;
+            color: #ffffff;
+        }
+
+        /* BOTÃO WHATSAPP */
+        .contact-submit {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            background: #087d49;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .contact-submit:hover {
+            background: #09975a;
+            transform: translateY(-2px);
+        }
+
+        .contact-privacy {
+            color: #8294a8;
+            font-size: 12px;
+            text-align: center;
+            margin-top: 14px;
+            line-height: 1.5;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 768px) {
+
+            .contact-page {
+                padding: 45px 0;
+            }
+
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form,
+            .contact-info {
+                padding: 22px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+
+        <div class="container header-container">
+
+            <a href="index.html" class="logo">
+                <img
+                    src="assets/logo/logo-lr.png"
+                    alt="LR Soluções de TI"
+                >
+            </a>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="agro-facil.html">Agro Fácil</a>
+                <a href="sobre.html">Sobre a LR</a>
+                <a href="contato.html">Fale Conosco</a>
+            </nav>
+
+            <a
+                href="https://wa.me/5567998497718"
+                class="btn-whatsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                WhatsApp
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+        <section class="contact-page">
+
+            <div class="container">
+
+                <div class="contact-heading">
+
+                    <span>ESTAMOS À DISPOSIÇÃO</span>
+
+                    <h1>
+                        Vamos conversar sobre sua
+                        <strong>necessidade?</strong>
+                    </h1>
+
+                    <p>
+                        Conte para nós o que sua empresa precisa.
+                        A LR Soluções de TI está pronta para ajudar
+                        com tecnologia, conectividade e infraestrutura.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-layout">
+
+                    <!-- INFORMAÇÕES DE CONTATO -->
+                    <div class="contact-info">
+
+                        <span class="contact-info-label">
+                            LR SOLUÇÕES DE TI
+                        </span>
+
+                        <h2>
+                            Tecnologia que impulsiona seu negócio.
+                        </h2>
+
+                        <p>
+                            Trabalhamos para tornar sua infraestrutura
+                            tecnológica mais organizada, estável e eficiente.
+                        </p>
+
+                        <div class="contact-info-item">
+
+                            <span class="contact-symbol">⌖</span>
+
+                            <div>
+                                <strong>Localização</strong>
+                                <span>Bonito - Mato Grosso do Sul</span>
+                            </div>
+
+                        </div>
+
+                        <div class="contact-info-item">
+
+                            <span class="contact-symbol">☎</span>
+
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <span>(67) 99849-7718</span>
+                            </div>
+
+                        </div>
+
+                        <div class="contact-info-item">
+
+                            <span class="contact-symbol">✓</span>
+
+                            <div>
+                                <strong>Atendimento</strong>
+                                <span>Empresas e negócios</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FORMULÁRIO -->
+                    <form class="contact-form" id="contactForm">
+
+                        <h2>Solicite um atendimento</h2>
+
+                        <div class="contact-field">
+
+                            <label for="contactName">
+                                Seu nome ou nome da sua empresa:
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contactName"
+                                placeholder="Digite seu nome ou empresa"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="contact-field">
+
+                            <label for="contactPhone">
+                                Seu telefone / WhatsApp:
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="contactPhone"
+                                placeholder="(67) 99999-9999"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="contact-field">
+
+                            <span class="contact-service-title">
+                                Qual serviço você procura?
+                            </span>
+
+                            <div class="contact-services-grid">
+
+                                <label class="contact-service-option">
+                                    <input type="checkbox" name="service" value="Suporte de TI">
+                                    <span>Suporte de TI</span>
+                                </label>
+
+                                <label class="contact-service-option">
+                                    <input type="checkbox" name="service" value="Redes e Wi-Fi">
+                                    <span>Redes e Wi-Fi</span>
+                                </label>
+
+                                <label class="contact-service-option">
+                                    <input type="checkbox" name="service" value="Manutenção de computadores">
+                                    <span>Manutenção de computadores</span>
+                                </label>
+
+                                <label class="contact-service-option">
+                                    <input type="checkbox" name="service" value="Infraestrutura e servidores">
+                                    <span>Infraestrutura e servidores</span>
+                                </label>
+
+                                <label class="contact-service-option">
+                                    <input type="checkbox" name="service" value="Sistemas e aplicativos">
+                                    <span>Sistemas e aplicativos</span>
+                                </label>
+
+                                <label class="contact-service-option">
+                                    <input type="checkbox" name="service" value="Segurança e monitoramento">
+                                    <span>Segurança e monitoramento</span>
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-field">
+
+                            <label for="contactMessage">
+                                Conte um pouco mais sobre o que precisa:
+                            </label>
+
+                            <textarea
+                                id="contactMessage"
+                                placeholder="Descreva sua necessidade..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <button type="submit" class="contact-submit">
+                            Enviar pelo WhatsApp
+                        </button>
+
+                        <p class="contact-privacy">
+                            Ao clicar, você será direcionado ao WhatsApp
+                            para enviar sua solicitação.
+                        </p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 LR Soluções de TI. Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ENVIO PARA WHATSAPP -->
+    <script>
+
+        const contactForm = document.getElementById("contactForm");
+
+        contactForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById("contactName").value.trim();
+
+            const phone = document.getElementById("contactPhone").value.trim();
+
+            const message = document.getElementById("contactMessage").value.trim();
+
+            const selectedServices = Array.from(
+                document.querySelectorAll('input[name="service"]:checked')
+            ).map(service => service.value);
+
+            if (selectedServices.length === 0) {
+                alert("Selecione pelo menos um serviço.");
+                return;
+            }
+
+            const whatsappMessage =
+                "Olá! Vim pelo site da LR Soluções de TI.\n\n" +
+                "*Nome ou empresa:* " + name + "\n" +
+                "*Telefone para retorno:* " + phone + "\n\n" +
+                "*Serviços de interesse:*\n- " +
+                selectedServices.join("\n- ") + "\n\n" +
+                "*Descrição da necessidade:*\n" + message;
+
+            const whatsappURL =
+                "https://wa.me/5567998497718?text=" +
+                encodeURIComponent(whatsappMessage);
+
+            window.open(whatsappURL, "_blank");
+
+        });
+
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

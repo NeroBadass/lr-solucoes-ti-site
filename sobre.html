@@ -1,0 +1,794 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sobre a LR | LR Soluções de TI</title>
+
+    <meta name="description" content="Conheça a LR Soluções de TI, sua atuação em suporte, redes, conectividade, infraestrutura e soluções tecnológicas em Bonito - MS.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .about-page {
+            background: #050b14;
+            color: #ffffff;
+        }
+
+        .about-hero {
+            padding: 90px 0;
+            background: linear-gradient(120deg, #071321, #050b14);
+        }
+
+        .about-hero-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-label {
+            color: #00c8ff;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+
+        .about-hero h1 {
+            font-size: clamp(34px, 5vw, 52px);
+            margin: 18px 0;
+            line-height: 1.15;
+        }
+
+        .about-hero h1 strong {
+            color: #00c8ff;
+        }
+
+        .about-hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #b4c2d1;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .about-section {
+            padding: 75px 0;
+        }
+
+        .about-section-heading {
+            max-width: 700px;
+            margin: 0 auto 45px;
+            text-align: center;
+        }
+
+        .about-section-heading span {
+            color: #00c8ff;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .about-section-heading h2 {
+            color: #ffffff;
+            font-size: clamp(26px, 4vw, 36px);
+            margin: 14px 0;
+        }
+
+        .about-section-heading p {
+            color: #aebdce;
+            line-height: 1.7;
+        }
+
+        /* QUEM SOMOS */
+        .about-company-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .about-company-text h2 {
+            font-size: 30px;
+            margin: 12px 0 20px;
+        }
+
+        .about-company-text h2 strong {
+            color: #00c8ff;
+        }
+
+        .about-company-text p {
+            color: #b4c2d1;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .about-company-visual {
+            background: #0a1422;
+            border: 1px solid #1b344b;
+            border-radius: 16px;
+            padding: 35px;
+            text-align: center;
+        }
+
+        .about-company-visual img {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .about-company-visual p {
+            color: #aebdce;
+            font-size: 13px;
+            margin-top: 18px;
+        }
+
+        /* FUNDADOR */
+        .about-founder {
+            background: #08111d;
+        }
+
+        .about-founder-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .about-founder-visual {
+            min-height: auto;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #00c8ff;
+            border-radius: 16px;
+            background: #0a1422;
+        }
+
+        .about-founder-photo {
+            display: block;
+            width: 100%;
+            height: 470px;
+            object-fit: cover;
+            object-position: center 35%;
+            border-radius: 15px;
+        }
+
+        .about-founder-text h2 {
+            font-size: 30px;
+            margin: 12px 0 20px;
+        }
+
+        .about-founder-text h2 strong {
+            color: #00c8ff;
+        }
+
+        .about-founder-text p {
+            color: #b4c2d1;
+            line-height: 1.8;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .about-founder-name {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-top: 22px;
+        }
+
+        .about-founder-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #00c8ff;
+            border-radius: 50%;
+            color: #00c8ff;
+            font-size: 23px;
+        }
+
+        .about-founder-name strong {
+            display: block;
+            font-size: 18px;
+        }
+
+        .about-founder-name span {
+            display: block;
+            color: #00c8ff;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        /* ÁREAS DE ATUAÇÃO */
+        .about-areas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .about-area-card {
+            background: #0a1422;
+            border: 1px solid #1b344b;
+            border-radius: 12px;
+            padding: 25px;
+            transition: 0.2s;
+        }
+
+        .about-area-card:hover {
+            border-color: #00c8ff;
+            transform: translateY(-3px);
+        }
+
+        .about-area-card .about-area-icon {
+            color: #00c8ff;
+            font-size: 26px;
+        }
+
+        .about-area-card h3 {
+            font-size: 17px;
+            margin: 15px 0 10px;
+        }
+
+        .about-area-card p {
+            color: #aebdce;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* NOSSA FORMA DE TRABALHAR */
+        .about-process {
+            background: #08111d;
+        }
+
+        .about-process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .about-process-card {
+            padding: 23px;
+            border: 1px solid #1b344b;
+            background: #0a1422;
+            border-radius: 12px;
+        }
+
+        .about-process-card span {
+            color: #00c8ff;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .about-process-card h3 {
+            font-size: 17px;
+            margin: 12px 0;
+        }
+
+        .about-process-card p {
+            color: #aebdce;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* COMPROMISSO */
+        .about-values {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .about-value {
+            padding: 25px;
+            border-left: 2px solid #00c8ff;
+            background: #0a1422;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .about-value h3 {
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        .about-value p {
+            color: #aebdce;
+            line-height: 1.7;
+            font-size: 13px;
+        }
+
+        /* CHAMADA FINAL */
+        .about-cta {
+            padding: 75px 0;
+            text-align: center;
+            background: linear-gradient(120deg, #071b2b, #071321);
+        }
+
+        .about-cta h2 {
+            font-size: clamp(26px, 4vw, 38px);
+            margin-bottom: 15px;
+        }
+
+        .about-cta h2 strong {
+            color: #00c8ff;
+        }
+
+        .about-cta p {
+            color: #b4c2d1;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+
+        .about-cta-button {
+            display: inline-block;
+            padding: 14px 25px;
+            background: #087d49;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        .about-cta-button:hover {
+            background: #09975a;
+            transform: translateY(-2px);
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 850px) {
+            .about-areas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-hero {
+                padding: 60px 0;
+            }
+
+            .about-section {
+                padding: 50px 0;
+            }
+
+            .about-company-grid,
+            .about-founder-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about-areas-grid,
+            .about-process-grid,
+            .about-values {
+                grid-template-columns: 1fr;
+            }
+
+            .about-company-visual {
+                padding: 25px;
+            }
+
+            .about-founder-photo {
+                height: 400px;
+                object-position: center 30%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+
+        <div class="container header-container">
+
+            <a href="index.html" class="logo">
+                <img src="assets/logo/logo-lr.png" alt="LR Soluções de TI">
+            </a>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="agro-facil.html">Agro Fácil</a>
+                <a href="sobre.html">Sobre a LR</a>
+                <a href="contato.html">Fale Conosco</a>
+            </nav>
+
+            <a href="https://wa.me/5567998497718"
+               class="btn-whatsapp"
+               target="_blank"
+               rel="noopener noreferrer">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </header>
+
+    <main class="about-page">
+
+        <!-- APRESENTAÇÃO -->
+        <section class="about-hero">
+
+            <div class="container about-hero-content">
+
+                <span class="about-label">SOBRE A LR SOLUÇÕES DE TI</span>
+
+                <h1>
+                    Tecnologia que conecta,
+                    organiza e <strong>impulsiona negócios.</strong>
+                </h1>
+
+                <p>
+                    Acreditamos que a tecnologia deve facilitar o dia a dia,
+                    melhorar processos e ajudar empresas a trabalharem
+                    com mais organização, conectividade e eficiência.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- QUEM SOMOS -->
+        <section class="about-section">
+
+            <div class="container about-company-grid">
+
+                <div class="about-company-text">
+
+                    <span class="about-label">QUEM SOMOS</span>
+
+                    <h2>
+                        Soluções de TI pensadas para
+                        <strong>necessidades reais.</strong>
+                    </h2>
+
+                    <p>
+                        A LR Soluções de TI atua com tecnologia,
+                        conectividade e infraestrutura, oferecendo
+                        suporte e soluções para empresas e negócios.
+                    </p>
+
+                    <p>
+                        Nosso trabalho envolve desde o suporte técnico
+                        do dia a dia até projetos de redes, Wi-Fi,
+                        servidores, segurança e sistemas.
+                    </p>
+
+                    <p>
+                        Buscamos compreender a realidade de cada cliente
+                        para propor soluções adequadas à sua estrutura
+                        e aos seus objetivos.
+                    </p>
+
+                </div>
+
+                <div class="about-company-visual">
+
+                    <img
+                        src="assets/logo/logo-lr.png"
+                        alt="Logotipo da LR Soluções de TI"
+                    >
+
+                    <p>
+                        Tecnologia que impulsiona seu negócio.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FUNDADOR -->
+        <section class="about-section about-founder">
+
+            <div class="container about-founder-grid">
+
+                <div class="about-founder-visual">
+
+                    <img
+                        src="assets/images/laurimar-rocha.jpg"
+                        alt="Laurimar Rocha, fundador da LR Soluções de TI"
+                        class="about-founder-photo"
+                    >
+
+                </div>
+
+                <div class="about-founder-text">
+
+                    <span class="about-label">POR TRÁS DA LR</span>
+
+                    <h2>
+                        Tecnologia com conhecimento,
+                        dedicação e <strong>responsabilidade.</strong>
+                    </h2>
+
+                    <p>
+                        A LR Soluções de TI é conduzida por Laurimar Rocha,
+                        profissional da área de tecnologia da informação,
+                        com atuação em suporte técnico, redes e infraestrutura.
+                    </p>
+
+                    <p>
+                        A experiência prática com ambientes de TI e conectividade
+                        faz parte da forma como a LR encara cada projeto:
+                        entendendo o cenário, identificando necessidades
+                        e buscando soluções funcionais.
+                    </p>
+
+                    <p>
+                        Mais do que resolver problemas pontuais, o objetivo
+                        é ajudar empresas a manterem sua tecnologia organizada,
+                        confiável e preparada para acompanhar suas atividades.
+                    </p>
+
+                    <div class="about-founder-name">
+
+                        <div class="about-founder-icon">LR</div>
+
+                        <div>
+                            <strong>Laurimar Rocha</strong>
+                            <span>Fundador · LR Soluções de TI</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ÁREAS DE ATUAÇÃO -->
+        <section class="about-section">
+
+            <div class="container">
+
+                <div class="about-section-heading">
+
+                    <span>O QUE FAZEMOS</span>
+
+                    <h2>
+                        Tecnologia em diferentes áreas do seu negócio.
+                    </h2>
+
+                    <p>
+                        Atuamos em áreas essenciais para manter
+                        a estrutura tecnológica da sua empresa funcionando.
+                    </p>
+
+                </div>
+
+                <div class="about-areas-grid">
+
+                    <article class="about-area-card">
+                        <span class="about-area-icon">⌘</span>
+                        <h3>Suporte de TI</h3>
+                        <p>
+                            Apoio técnico para computadores,
+                            sistemas e infraestrutura de trabalho.
+                        </p>
+                    </article>
+
+                    <article class="about-area-card">
+                        <span class="about-area-icon">⌁</span>
+                        <h3>Redes e Wi-Fi</h3>
+                        <p>
+                            Projetos e configurações de redes
+                            cabeadas e redes sem fio.
+                        </p>
+                    </article>
+
+                    <article class="about-area-card">
+                        <span class="about-area-icon">▣</span>
+                        <h3>Infraestrutura e servidores</h3>
+                        <p>
+                            Organização, configuração e suporte
+                            à infraestrutura tecnológica.
+                        </p>
+                    </article>
+
+                    <article class="about-area-card">
+                        <span class="about-area-icon">⚙</span>
+                        <h3>Sistemas e aplicativos</h3>
+                        <p>
+                            Desenvolvimento e soluções digitais
+                            para facilitar processos e rotinas.
+                        </p>
+                    </article>
+
+                    <article class="about-area-card">
+                        <span class="about-area-icon">◉</span>
+                        <h3>Segurança e monitoramento</h3>
+                        <p>
+                            Soluções de conectividade, câmeras
+                            e organização dos sistemas de monitoramento.
+                        </p>
+                    </article>
+
+                    <article class="about-area-card">
+                        <span class="about-area-icon">⌖</span>
+                        <h3>Conectividade</h3>
+                        <p>
+                            Soluções de internet e conectividade
+                            para ambientes empresariais e rurais.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- NOSSA FORMA DE TRABALHAR -->
+        <section class="about-section about-process">
+
+            <div class="container">
+
+                <div class="about-section-heading">
+
+                    <span>NOSSA FORMA DE TRABALHAR</span>
+
+                    <h2>
+                        Cada solução começa entendendo o problema.
+                    </h2>
+
+                    <p>
+                        Trabalhamos com uma abordagem prática,
+                        buscando clareza em cada etapa.
+                    </p>
+
+                </div>
+
+                <div class="about-process-grid">
+
+                    <article class="about-process-card">
+                        <span>ETAPA 1</span>
+                        <h3>Entender</h3>
+                        <p>
+                            Conhecer a necessidade, o ambiente
+                            e os objetivos do cliente.
+                        </p>
+                    </article>
+
+                    <article class="about-process-card">
+                        <span>ETAPA 2</span>
+                        <h3>Avaliar</h3>
+                        <p>
+                            Analisar a estrutura existente
+                            e identificar oportunidades de melhoria.
+                        </p>
+                    </article>
+
+                    <article class="about-process-card">
+                        <span>ETAPA 3</span>
+                        <h3>Planejar</h3>
+                        <p>
+                            Definir uma solução adequada
+                            à necessidade e à realidade do negócio.
+                        </p>
+                    </article>
+
+                    <article class="about-process-card">
+                        <span>ETAPA 4</span>
+                        <h3>Executar</h3>
+                        <p>
+                            Implementar, configurar e orientar
+                            para que a solução funcione corretamente.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- COMPROMISSO -->
+        <section class="about-section">
+
+            <div class="container">
+
+                <div class="about-section-heading">
+
+                    <span>NOSSO COMPROMISSO</span>
+
+                    <h2>
+                        Mais do que tecnologia, queremos entregar confiança.
+                    </h2>
+
+                </div>
+
+                <div class="about-values">
+
+                    <article class="about-value">
+                        <h3>Atendimento próximo</h3>
+                        <p>
+                            Entender a necessidade do cliente
+                            e manter uma comunicação clara.
+                        </p>
+                    </article>
+
+                    <article class="about-value">
+                        <h3>Soluções adequadas</h3>
+                        <p>
+                            Buscar alternativas compatíveis
+                            com a realidade de cada negócio.
+                        </p>
+                    </article>
+
+                    <article class="about-value">
+                        <h3>Responsabilidade técnica</h3>
+                        <p>
+                            Trabalhar com organização,
+                            cuidado e atenção aos detalhes.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CHAMADA FINAL -->
+        <section class="about-cta">
+
+            <div class="container">
+
+                <span class="about-label">VAMOS CONVERSAR?</span>
+
+                <h2>
+                    Sua empresa precisa de tecnologia
+                    que <strong>funciona?</strong>
+                </h2>
+
+                <p>
+                    Conte para a LR Soluções de TI o que seu negócio precisa.
+                    Vamos conversar e encontrar um caminho.
+                </p>
+
+                <a
+                    href="https://wa.me/5567998497718?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20LR%20Solu%C3%A7%C3%B5es%20de%20TI."
+                    class="about-cta-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Falar com a LR pelo WhatsApp
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 LR Soluções de TI. Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
